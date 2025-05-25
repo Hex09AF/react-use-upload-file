@@ -1,22 +1,55 @@
 {
-  "name": "bun-react-template",
+  "name": "react-use-upload-file",
   "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "main": "src/index.tsx",
-  "module": "src/index.tsx",
-  "scripts": {
-    "dev": "bun --hot src/index.tsx",
-    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
-    "start": "NODE_ENV=production bun src/index.tsx"
+  "description": "A React hook for handling file uploads.",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/Hex09AF/react-use-upload-file#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hex09AF/react-use-upload-file.git"
   },
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/Hex09AF/react-use-upload-file/issues"
+  },
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bun run build.ts",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {
     "react": "^19",
     "react-dom": "^19"
   },
   "devDependencies": {
+    "@happy-dom/global-registrator": "^17.4.7",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/bun": "latest",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/bun": "latest"
+    "bun-plugin-dts": "^0.3.0",
+    "prettier": "^3.5.3",
+    "react": "^19",
+    "react-dom": "^19",
+    "typescript": "^5.8.3"
   }
 }

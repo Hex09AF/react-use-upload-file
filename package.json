@@ -1,7 +1,7 @@
 {
   "name": "react-use-upload-file",
   "type": "module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A React hook for handling file uploads.",
   "files": [
     "dist",
@@ -21,7 +21,7 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "npx rimraf dist",
+    "clean": "rm -rf dist",
     "build": "bun clean && tsc",
     "prepublishOnly": "bun run build"
   },
@@ -40,8 +40,5 @@
     "prettier": "^3.5.3",
     "react": "^19",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "tslib": "^2.8.1"
   }
 }

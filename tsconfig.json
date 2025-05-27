@@ -4,24 +4,21 @@
       "es2018",
       "dom"
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
+    "resolveJsonModule": true,
     // Environment setup & latest features
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
     "jsx": "react-jsx",
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     // Bundler mode
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "noEmit": false,
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "sourceMap": false,
     // Best practices
     "strict": true,
     "skipLibCheck": true,
@@ -41,6 +38,7 @@
   ],
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "src/react/tests"
   ]
 }

@@ -1,5 +1,5 @@
 import { useCallback, useReducer } from "react"
-import { type LoadingAction, type LoadingState, LoadingStates } from "@/core"
+import { type LoadingAction, type LoadingState, LoadingStates } from "../core"
 
 const loadingReducer = (
   state: LoadingState,

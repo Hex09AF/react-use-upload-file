@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test"
 import { LoadingStates } from "@/core"
 import { useLoadingState } from "@/react/useLoadingState"
 import { fireEvent, render, screen } from "@testing-library/react"
+import React from "react"
 
 const TestComponent = () => {
   const { loadingState, startLoading, finishLoading, endLoading } = useLoadingState()
